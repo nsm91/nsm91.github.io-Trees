@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Trees">
+    <meta name="author" content="Neil Mudjer">
 
-    <title>Portfolio Item - Start Bootstrap Template</title>
+    <title>QGIS Tree Inventory</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -28,105 +28,127 @@
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
     <!-- Page Content -->
     <div class="container">
 
         <!-- Portfolio Item Heading -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Portfolio Item
-                    <small>Item Subheading</small>
-                </h1>
+                <h1 class="page-header" id="title">QGIS Tree Inventory<h1>
+				<h4>This map was created specifically for use with the new (and still currently experimental) app QField®. 
+				It's design is meant to be user friendly even for non-GIS personal and cartographically appealling 
+				even on smartphone screen. Below are the methods I employed to acheive these goals.
+				<br>
+                    <h1><small>Accelerated Full Scale Renderings</small></h1>
             </div>
         </div>
         <!-- /.row -->
 
-        <!-- Portfolio Item Row -->
+        <!-- Full Zoom -->
         <div class="row">
 
             <div class="col-md-8">
-                <img class="img-responsive" src="http://placehold.it/750x500" alt="">
+				<a href="http://gdurl.com/KhII">
+                <img class="img-responsive" src="http://gdurl.com/KhII" height=500px width=750px alt="">
+				</a>
             </div>
 
             <div class="col-md-4">
-                <h3>Project Description</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-                <h3>Project Details</h3>
+                <h2><small>Goals</small></h2>
+                <p>Since the innitial view upon opening the app would be the entire village, I wanted this innitial rendering to be as 
+				quick as possible. To facilitate this I used maximum geometry simplification for the parcels polygon layer. Additionally, 
+				I made both the polyline street layer with actual attribute data and the polygon street layer with curb to curb geometry data 
+				invisible at this scale. Likewise I do not have any labels visible at this extent, nor any historic trees that are no longer standing.
+				</p>
+                <h2><small>Highlights</small></h2>
                 <ul>
-                    <li>Lorem Ipsum</li>
-                    <li>Dolor Sit Amet</li>
-                    <li>Consectetur</li>
-                    <li>Adipiscing Elit</li>
+                    <li>Simplified Parcel Geometries</li>
+                    <li>"Invisible" Streets</li>
+                    <li>No labels at Full Scale</li>
+                    <li>Only Standing Trees Visible</li>
                 </ul>
             </div>
-
+		</div>
+		<!-----Section 2 ---->
+					<hr>
+		<div class="row">
+            <div class="col-lg-12">
+                <h1 id="section_2"><small>Higher Detail and Information at Magnified Scales</small></h1>
+            </div>
         </div>
         <!-- /.row -->
 
-        <!-- Related Projects Row -->
+        <!-- Scales -->
         <div class="row">
 
-            <div class="col-lg-12">
-                <h3 class="page-header">Related Projects</h3>
+            <div class="col-md-8">
+				<a href="http://gdurl.com/UnB1">
+                <img class="img-responsive" src="http://gdurl.com/UnB1" height=500px width=750px alt="">
+				</a>
             </div>
 
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-                </a>
+            <div class="col-md-4">
+                <h2><small>Goals</small></h2>
+                <p>At zoomed in scales the parcels polygons no longer experience geometry simplifications. Additionally, the street 
+				polygon layer is now rendered, allowing for accurate interpretations of right-of-way distances off the curb. 
+				Underneath this polygon layer is the still invisible polyline street layer, but yet, the polyline labels do become visible. 
+				These labels are the largest and are buffered so as to always stand out. Parcel labels 
+				containing street addresses are visible at this scale too, however labels for tree species still are not. Note also that small red 
+				dots are now visible, denoting historic locations for trees - important for inventory verification.
+				</p>
+                <h2><small>Highlights</small></h2>
+                <ul>
+                    <li>Scale Dependent Renderings</li>
+                    <li>"Overlapping" Streets</li>
+                    <li>Scale Dependent Labeling</li>
+                    <li>Historic Trees Visible</li>
+                </ul>
             </div>
-
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-                <a href="#">
-                    <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
-                </a>
-            </div>
-
+			
         </div>
+        <!-- /.row -->
+
+		<!-----Section 3 ---->
+					<hr>
+		<div class="row">
+            <div class="col-lg-12">
+                <h1 id="section_3"><small>Rule Based Tree Layer</small></h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Scales -->
+        <div class="row">
+
+            <div class="col-md-8">
+				<a href="http://gdurl.com/MExb">
+                <img class="img-responsive" src="http://gdurl.com/MExb" height=500px width=750px alt="">
+				</a>
+            </div>
+
+            <div class="col-md-4">
+                <h2><small>Goals</small></h2>
+                <p>Since the actual tree data was the focus and driver of this entire project, it is only fitting that they 
+				comprise the most robust portion of the map. As such I utilized three levels of rule based options (for styling, 
+				rendering, and labeling) to deliver the information in the most immediately useful fashion possible. Only 
+				currently standing trees would appear at full zoom, with the conventional symbol, and with a label. All historic trees 
+				would only render at a zoomed in scale, as smaller and less pronounced red dots, and would do so without labels, unless user selected, 
+				so as to not crowd the map.
+				</p>
+                <h2><small>Highlights</small></h2>
+                <ul>
+                    <li>Rule Based Styles</li>
+                    <li>Rule Based Renderings</li>
+                    <li>Rule Based Labels</li>
+                </ul>
+            </div>
+			
+        </div>
+        <!-- /.row -->
+		
+		
+		
+		
         <!-- /.row -->
 
         <hr>
@@ -135,7 +157,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Created for the Burr Ridge Public Works 2016</p>
                 </div>
             </div>
             <!-- /.row -->
