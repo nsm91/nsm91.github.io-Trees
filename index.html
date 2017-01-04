@@ -37,14 +37,14 @@
                 <h1 class="page-header" id="title">QGIS Tree Inventory<h1>
 				<h4>In the destructive wake of EAB (emerald ash borer), Burr Ridge was faced with removing over a fifth 
 				of all parkway trees - exceeding two thousand ash trees. Back logged with removals and new plantings, their tree inventory 
-				was facing obsoletion. Not only was I tasked with bringing the inventory up to current working order, but to 
-				also create a system that would be easier to update and manage on a casual, day to day basis. As such, 
-				I made the inventory compatible with a mobile app.
+				was facing obsoletion. I was tasked with bringing the inventory up to dateas well as creating 
+				a system that would be easier to update and manage in the future. As such, 
+				I wanted the inventory to be mobile and accessible outside the office.
 				<br>
 				<br>
-				This map was created specifically for use with the new (and still currently experimental) app QField®. 
+				This inventory was created specifically for use with the new (and still currently experimental) app QField® through QGIS. 
 				It's design is meant to be user friendly even for non-GIS personal and cartographically appealling 
-				even on smartphone screen. Below are the methods I employed to acheive these goals.</h4>
+				even on a smartphone screen. Below is a recounting of some of the goals and their execution.</h4>
 				<hr>
                     <h1><small>Accelerated Full Scale Renderings</small></h1>
             </div>
@@ -63,16 +63,17 @@
             <div class="col-md-4">
                 <h2><small>Goals</small></h2>
                 <p>Since the innitial view upon opening the app would be the entire village, I wanted this innitial rendering to be as 
-				quick as possible. To facilitate this I used maximum geometry simplification for the parcels polygon layer. Additionally, 
-				I made both the polyline street layer with actual attribute data and the polygon street layer with curb to curb geometry data 
-				invisible at this scale. Likewise I do not have any labels visible at this extent, nor any historic trees that are no longer standing.
+				quick as possible. To facilitate this I used maximum geometric simplification for the parcels polygon layer. 
+				Only the parcels layer and the trees layer would be innitially visible. Labels are disabled until much 
+				larger scales. I chose these two layer because together they gave an adequate sense of the village for 
+				identifying a place of interest.
 				</p>
                 <h2><small>Highlights</small></h2>
                 <ul>
                     <li>Simplified Parcel Geometries</li>
-                    <li>"Invisible" Streets</li>
+                    <li>Minimal Feature Rendering</li>
                     <li>No labels at Full Scale</li>
-                    <li>Only Standing Trees Visible</li>
+                    <li>Only Current Trees Visible</li>
                 </ul>
             </div>
 		</div>
@@ -96,10 +97,12 @@
 
             <div class="col-md-4">
                 <h2><small>Goals</small></h2>
-                <p>At zoomed in scales the parcels polygons no longer undergo geometry simplification. Additionally, polygons of buildings,
-				road pavement, and driveways now render, giving a less abstract sense of space and accurate interpretations 
-				of right-of-way distances from the curb. Underneath the street polygon layer is the still invisible street polyline 
-				layer, but their labels are visible. Parcel labels containing street addresses are visible at this scale too.
+                <p>At zoomed in scales the parcels polygons no longer undergo geometric simplification. Additionally, polygons of 
+				buildings, road pavement, and driveways now render, giving a less abstract sense of space. This 
+				allows for more accurate interpretations of right-of-way distances from the curb. Underneath the 
+				street polygon
+				layer is the still invisible street polyline layer, with only their labels are visible. Parcel labels 
+				containing street addresses are visible at this scale too.
 				</p>
                 <h2><small>Highlights</small></h2>
                 <ul>
@@ -132,12 +135,12 @@
 
             <div class="col-md-4">
                 <h2><small>Goals</small></h2>
-                <p>Since the actual tree data was the focus and driver of the entire project, it is only fitting that they 
-				comprise the most robust portion of the map. As such I utilized three levels of rule based options (for styling, 
-				rendering, and labeling) to deliver the information in the most immediately useful fashion possible. Only 
-				currently standing trees would appear at full zoom, with the conventional symbol, and eventually with a label. All historic trees 
-				would only render at a zoomed in scale, as smaller and less pronounced red dots, and would do so without labels. 
-				Trees that need monitoring due to specific structural flaws appear in a different color, as due trees designated for removal.
+                <p>Since the actual tree data was the focus and driver of the entire project, I used three levels of rule based options 
+				(for styling, rendering, and labeling) to deliver the information in the most immediately useful fashion 
+				possible. Only currently standing trees would appear at full zoom, with the conventional symbol, and 
+				then at larger scales with a label. All historic trees would only render at a zoomed in scale, as smaller and less 
+				pronounced red dots, and would do so without labels. Trees that need monitoring due to specific structural 
+				flaws appear in a different color, as well as trees that are designated for removal.
 				</p>
                 <h2><small>Highlights</small></h2>
                 <ul>
