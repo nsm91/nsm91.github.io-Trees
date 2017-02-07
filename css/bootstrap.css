@@ -1124,10 +1124,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-span.centerImage {
-  text-align: center;
-  width: 100%;
-}
 .img-rounded {
   border-radius: 6px;
 }
