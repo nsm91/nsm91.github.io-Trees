@@ -1125,7 +1125,8 @@ img {
   height: auto;
 }
 span.centerImage {
-     text-align: center;
+  text-align: center;
+  width: 100%;
 }
 .img-rounded {
   border-radius: 6px;
